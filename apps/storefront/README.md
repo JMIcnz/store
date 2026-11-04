@@ -1,4 +1,4 @@
-# build command
+# CF build command
 `pnpm exec opennextjs-cloudflare build`  
 output:
 ```
@@ -6,7 +6,7 @@ output:
 .open-next/assets
 ```
 
-# deploy command
+# CF deploy command
 `pnpm exec wrangler deploy`  
 use `wrangler.jsonc` as args which define:
 ```
@@ -17,3 +17,9 @@ use `wrangler.jsonc` as args which define:
     "binding": "ASSETS"
 },
 ```
+
+# Var for both build time and run time in CF
+* NEXT_PUBLIC_DEFAULT_REGION         // nz, which has been set in medusa admin
+* NEXT_PUBLIC_BASE_URL               // this store public url
+* NEXT_PUBLIC_MEDUSA_BACKEND_URL     // medusa backend url without trailing slash
+* NEXT_PUBLIC_MEDUSA_PUBLISHABLE_KEY // get from medusa admin
